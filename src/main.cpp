@@ -69,4 +69,5 @@ int main(int argc, char *argv []) {
  versioninfo(true);
  
  DatabaseManager *db = new DatabaseManager("main");
+ free(db);
 }

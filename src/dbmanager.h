@@ -29,6 +29,6 @@ private:
  std::string dbname;
 public:
  DatabaseManager(std::string);
-}
+};
 
 #endif /* DATABASEMANAGER_H */

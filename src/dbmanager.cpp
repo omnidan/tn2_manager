@@ -17,7 +17,7 @@
  */
 
 // Headers
-#include "databasemanager.h"
+#include "dbmanager.h"
 
 DatabaseManager::DatabaseManager(std::string database_name) {
  dbname = database_name;
