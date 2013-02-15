@@ -1,0 +1,4 @@
+bin/tn2_db
+bin/tn2_db_dbg
+*.swp
+*.o
