@@ -21,6 +21,7 @@
 
 // Version specific settings (do not change)
 #define NAME		"tn2_db"
+#define NAME_TAG	"[tn2_db     ]"
 #define VERSION		"0.1a"
 #define VERSION_TAG	"ALPHA"
 
