@@ -29,19 +29,19 @@
 
 /* versioninfo: Show information about this build */
 void versioninfo(bool booting) {
- std::cout << "[INFO ] " << NAME_TAG << " [main        ] " << NAME << " v" << VERSION;
+ std::cout << "[INFO ] [main        ] " << NAME << " v" << VERSION;
  #ifdef VERSION_TAG
  std::cout << " (" << VERSION_TAG << ")";
  #endif
  if (booting) std::cout << " booting..." << std::endl;
  else std::cout << " built at " << __DATE__ << ", " << __TIME__ << "." << std::endl;
- std::cout << "[INFO ] " << NAME_TAG << " [main        ]  Copyright (c) 2013 Daniel Bugl <daniel.bugl@touchlay.com>" << std::endl;
+ std::cout << "[INFO ] [main        ]  Copyright (c) 2013 Daniel Bugl <daniel.bugl@touchlay.com>" << std::endl;
  if (!booting) {
-  std::cout << "[INFO ] " << NAME_TAG << " [main        ] Compilation configuration:" << std::endl;
+  std::cout << "[INFO ] [main        ] Compilation configuration:" << std::endl;
   #ifdef DEBUG
-  std::cout << "[INFO ] " << NAME_TAG << " [main        ]  DEBUG=true" << std::endl;
+  std::cout << "[INFO ] [main        ]  DEBUG=true" << std::endl;
   #else
-  std::cout << "[INFO ] " << NAME_TAG << " [main        ]  DEBUG=false" << std::endl;
+  std::cout << "[INFO ] [main        ]  DEBUG=false" << std::endl;
   #endif
  }
 }
@@ -57,8 +57,8 @@ int main(int argc, char *argv []) {
     return EXIT_SUCCESS;
     break;
    case '?':
-    if (isprint((char)optopt)) std::cout << "[ERROR] " << NAME_TAG << " [main        ] Unknown option: -" << (char)optopt << "." << std::endl;
-    else std::cout << "[ERROR] " << NAME_TAG << " [main        ] Unknown option character: " << (char)optopt << "." << std::endl;
+    if (isprint((char)optopt)) std::cout << "[ERROR] [main        ] Unknown option: -" << (char)optopt << "." << std::endl;
+    else std::cout << "[ERROR] [main        ] Unknown option character: " << (char)optopt << "." << std::endl;
     return EXIT_FAILURE;
    default:
     abort();

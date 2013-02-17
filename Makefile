@@ -1,4 +1,4 @@
-EXECUTABLE=bin/tn2_db
+EXECUTABLE=bin/tn2_manager
 SOURCES=src/main.cpp src/dbmanager.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 CPP=g++
