@@ -3,7 +3,7 @@
  *
  *       Filename:  main.cpp
  *
- *    Description:  Main entry for the database system
+ *    Description:  Main entry for the manager
  *
  *        Version:  0.1
  *        Created:  15/02/13 21:56:47
@@ -25,7 +25,7 @@
 
 // Internal headers
 #include "config.h"
-#include "dbmanager.h"
+#include "manager.h"
 
 /* versioninfo: Show information about this build */
 void versioninfo(bool booting) {
@@ -68,6 +68,6 @@ int main(int argc, char *argv []) {
  // Print info messages
  versioninfo(true);
  
- DatabaseManager *db = new DatabaseManager("main");
- free(db);
+ Manager *m = new Manager();
+ free(m);
 }

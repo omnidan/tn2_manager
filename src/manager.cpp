@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  dbmanager.h
+ *       Filename:  manager.cpp
  *
- *    Description:  Database manager - headers
+ *    Description:  Manager
  *
  *        Version:  0.1
- *        Created:  15/02/13 21:49:56
+ *        Created:  15/02/13 21:49:01
  *       Revision:  none
  *       Compiler:  g++
  *
@@ -16,19 +16,9 @@
  * =====================================================================================
  */
 
-#ifndef DATABASEMANAGER_H
-#define DATABASEMANAGER_H
+// Headers
+#include "manager.h"
 
-#include "config.h"
-
-// Standard headers
-#include <iostream>
-
-class DatabaseManager {
-private:
- std::string dbname;
-public:
- DatabaseManager(std::string);
-};
-
-#endif /* DATABASEMANAGER_H */
+Manager::Manager() {
+ 
+}

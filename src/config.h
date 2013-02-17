@@ -20,8 +20,7 @@
 #define CONFIG_H
 
 // Version specific settings (do not change)
-#define NAME		"tn2_db"
-#define NAME_TAG	"[tn2_db     ]"
+#define NAME		"tn2_manager"
 #define VERSION		"0.1a"
 #define VERSION_TAG	"ALPHA"
 
