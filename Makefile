@@ -4,7 +4,7 @@ OBJECTS=$(SOURCES:.cpp=.o)
 CPP=g++
 FLAGS=-ansi -pedantic -Wall -s -O2 -Werror
 LDFLAGS=
-DEBUG_FLAGS=-g -lm -Wall -DDEBUG
+DEBUG_FLAGS=-g -lm -DDEBUG
 
 all: clean $(EXECUTABLE) $(EXECUTABLE)_dbg
 
