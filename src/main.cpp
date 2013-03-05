@@ -71,4 +71,5 @@ int main(int argc, char *argv []) {
  
  // Test sandbox
  Sandbox *sb = new Sandbox();
+ free(sb);
 }

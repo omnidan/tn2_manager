@@ -1,5 +1,5 @@
 EXECUTABLE=bin/tn2_manager
-SOURCES=src/main.cpp src/manager.cpp
+SOURCES=src/main.cpp src/manager.cpp src/sandbox.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 CPP=g++
 FLAGS=-ansi -pedantic -Wall -s -O2 -Werror
