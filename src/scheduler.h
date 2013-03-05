@@ -24,21 +24,23 @@
 // Standard headers
 #include <iostream>
 #include <time.h>
+#include <vector>
 
-class Event {
- // TODO
+struct Event {
+ int id;
+ unsigned long start;
+ void (*func)(void);
+ int timeout;
 };
 
 class Scheduler {
 private:
- unsigned long start;
- Event events[];
- unsigned long elapsedTime(void);
+ std::vector<Event *> events;
+ unsigned long elapsedTime(Event *);
  void tick(void);
 public:
  Scheduler();
- void reset(void);
- int addEvent(void *, int);
+ int addEvent(void (*)(void), int);
  void delEvent(int);
 };
 
