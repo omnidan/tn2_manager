@@ -26,6 +26,7 @@
 // Internal headers
 #include "config.h"
 #include "manager.h"
+#include "sandbox.h"
 
 /* versioninfo: Show information about this build */
 void versioninfo(bool booting) {
@@ -68,6 +69,6 @@ int main(int argc, char *argv []) {
  // Print info messages
  versioninfo(true);
  
- Manager *m = new Manager();
- free(m);
+ // Test sandbox
+ Sandbox *sb = new Sandbox();
 }
