@@ -10,7 +10,7 @@
  *       Revision:  none
  *       Compiler:  g++
  *
- *         Author:  Daniel Bugl <Daniel.Bugl@touchlay.com>
+ *         Author:  Daniel Bugl <daniel.bugl@touchlay.com>
  *   Organization:  TouchLay
  *
  * =====================================================================================
