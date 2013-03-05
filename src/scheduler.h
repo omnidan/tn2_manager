@@ -23,10 +23,23 @@
 
 // Standard headers
 #include <iostream>
+#include <time.h>
+
+class Event {
+ // TODO
+};
 
 class Scheduler {
+private:
+ unsigned long start;
+ Event events[];
+ unsigned long elapsedTime(void);
+ void tick(void);
 public:
  Scheduler();
+ void reset(void);
+ int addEvent(void *, int);
+ void delEvent(int);
 };
 
 #endif /* SCHEDULER_H */

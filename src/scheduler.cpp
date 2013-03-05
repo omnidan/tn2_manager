@@ -19,6 +19,29 @@
 // Headers
 #include "scheduler.h"
 
+void Scheduler::reset(void) {
+ start = clock();
+}
+
+unsigned long Scheduler::elapsedTime(void) {
+ return ((unsigned long) clock() - start) / CLOCKS_PER_SEC;
+}
+
+int Scheduler::addEvent(void *func, int timeout) {
+ // TODO: add an event to the array
+}
+
+void Scheduler::delEvent(int id) {
+ // TODO: remove event by id
+}
+
+void Scheduler::tick(void) {
+ // TODO: loop through events and check if one occured
+}
+
 Scheduler::Scheduler() {
- 
+ #ifdef DEBUG
+ std::cout << "[DEBUG] [scheduler  ] Starting scheduler loop..." << std::endl;
+ #endif
+ while (true) tick();
 }
