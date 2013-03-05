@@ -51,11 +51,21 @@ std::string Sandbox::exec(std::string cmd) {
  return rbuffer;
 }
 
+Json::Value Sandbox::run(std::string cmd, std::string args) {
+ std::string buf = cmd + " " + args;
+ #ifdef DEBUG
+ std::cout << "[DEBUG] [sandbox     ] Running '" << cmd << "' with '" << args << "'..." << std::endl;
+ #endif
+ std::string result = exec(buf);
+ #ifdef DEBUG
+ std::cout << "[DEBUG] [sandbox     ] Result: " << result << std::endl;
+ #endif
+ return parseJSON(result);
+}
+
 Sandbox::Sandbox() {
  std::cout << "[TEST ] [sandbox     ] Starting sandbox test..." << std::endl;
- std::string result = exec("./bin/sb_test");
- std::cout << "[TEST ] [sandbox     ] Result: " << result << std::endl;
- Json::Value rjson = parseJSON(result);
- if (rjson.isMember("test")) std::cout << "[TEST ] [sandbox     ] JSON Test: " << rjson.get("test", rjson) << std::endl;
+ Json::Value result = run("./bin/sb_test", "{}");
+ if (result.isMember("test")) std::cout << "[TEST ] [sandbox     ] JSON Test: " << result.get("test", result) << std::endl;
  else std::cout << "[TEST ] [sandbox     ] JSON Test failed!" << std::endl;
 }

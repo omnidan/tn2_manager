@@ -31,6 +31,7 @@ class Sandbox {
 private:
  Json::Value parseJSON(std::string);
  std::string exec(std::string);
+ Json::Value run(std::string, std::string);
 public:
  Sandbox();
 };
