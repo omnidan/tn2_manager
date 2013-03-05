@@ -20,11 +20,17 @@
 #define SANDBOX_H
 
 #include "config.h"
+#include "json/json.h"
 
 // Standard headers
 #include <iostream>
+#include <stdio.h>
+#include <string>
 
 class Sandbox {
+private:
+ Json::Value parseJSON(std::string);
+ std::string exec(std::string);
 public:
  Sandbox();
 };

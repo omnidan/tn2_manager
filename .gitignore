@@ -1,4 +1,5 @@
 bin/tn2_manager
 bin/tn2_manager_dbg
+bin/sb_test
 *.swp
 *.o
