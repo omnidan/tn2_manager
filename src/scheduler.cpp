@@ -40,8 +40,9 @@ void Scheduler::tick(void) {
 }
 
 Scheduler::Scheduler() {
+ std::cout << "[TEST ] [scheduler   ] Starting scheduler test..." << std::endl;
  #ifdef DEBUG
- std::cout << "[DEBUG] [scheduler  ] Starting scheduler loop..." << std::endl;
+ std::cout << "[DEBUG] [scheduler   ] Starting scheduler loop..." << std::endl;
  #endif
  while (true) tick();
 }
