@@ -27,6 +27,7 @@
 #include "config.h"
 #include "manager.h"
 #include "sandbox.h"
+#include "scheduler.h"
 
 /* versioninfo: Show information about this build */
 void versioninfo(bool booting) {
@@ -70,6 +71,8 @@ int main(int argc, char *argv []) {
  versioninfo(true);
  
  // Test sandbox
- Sandbox *sb = new Sandbox();
- free(sb);
+ new Sandbox();
+ 
+ // Test scheduler
+ new Scheduler();
 }
